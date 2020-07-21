@@ -1,0 +1,37 @@
+Package: topicHelpers
+Type: Package
+Title: Stm Topic Modeling Helper Functions
+Version: 0.1.0
+Authors@R: c(
+    person(given = "Jeremy",
+           family = "Allen",
+           role = "aut",
+           email = "jeremy.allen@polarisalpha.com"),
+    person(given = "Travis",
+           family = "Knoche",
+           role = c("aut", "cre"),
+           email = "travis.knoche@polarisalpha.com"))
+Maintainer: Travis Knoche <travis.knoche@polarisalpha.com>
+Description: Useful helper functions for processing and exploring stm topic modeling. 
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    magrittr,
+    dplyr,
+    tidyr,
+    tidyselect,
+    ggplot2,
+    ggthemes,
+    scales,
+    tibble,
+    stringr,
+    tidyverse,
+    tidytext,
+    purrr,
+    stm,
+    broom,
+    rlang,
+    tm
+Depends: R (>= 3.5.0)
+RoxygenNote: 7.1.0
