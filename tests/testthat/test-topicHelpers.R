@@ -32,7 +32,14 @@ test_that("class of make_topic_prevalence_plot is gg and ggplot", {
   expect_true(all.equal(class(test_plot), c("gg", "ggplot")))
 })
 
-
+test_that("get_top_n_beta_terms two correct-type columns", {
+  td_beta <- get_td_beta(test_mod)
+  beta_terms <- get_top_n_beta_terms(td_beta_obj = td_beta, n = 8)
+  expect_true(length(beta_terms) == 2)
+  # make list containing column classes
+  my_types <- map(beta_terms, class)
+  expect_true(my_types$topic == "integer" & my_types$terms == "character")
+})
 
 
 

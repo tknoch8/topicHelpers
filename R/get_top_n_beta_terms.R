@@ -25,7 +25,7 @@ get_top_n_beta_terms <- function(td_beta_obj, n = 7) {
     select(topic, term) %>% 
     summarize(terms = list(term)) %>% 
     mutate(terms = map(terms, paste, collapse = ", ")) %>% 
-    unnest()
+    unnest(cols = c(terms))
 }
 
 if(getRversion() >= "2.15.1")  utils::globalVariables(c(".", "term"))
