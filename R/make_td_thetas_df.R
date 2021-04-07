@@ -34,7 +34,8 @@ make_td_thetas_df <- function(prepped_meta_obj, id_col, topicModel, topicModel_K
   test <- as.data.frame(prepped_meta_obj) %>% 
     select(!!my_id_col) %>% 
     cbind(topicModel$theta) %>% 
-    rename_at(vars(-contains("id_")), list(~paste0("topic_", c(1:topicModel_K))))
+    rename_with(~paste0("topic_", c(1:length(.)-1)), -contains("article_id"))
+    # rename_at(vars(-contains("id_")), list(~paste0("topic_", c(1:topicModel_K))))
   
   message("------------renaming done")
   
