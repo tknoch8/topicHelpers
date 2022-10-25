@@ -14,7 +14,10 @@
 #' @importFrom dplyr enquo select rename_at vars
 #' @importFrom tidyselect contains
 #' @importFrom rlang get_expr
+<<<<<<< HEAD
 #' @importFrom dplyr rename_with
+=======
+>>>>>>> d253ff39e0a445a70ff3845ff7444c3f5ab863a9
 #' @examples 
 #' \dontrun{
 #' data("tm_ex_dat")
@@ -35,7 +38,11 @@ make_td_thetas_df <- function(prepped_meta_obj, id_col, topicModel, topicModel_K
   test <- as.data.frame(prepped_meta_obj) %>% 
     select(!!my_id_col) %>% 
     cbind(topicModel$theta) %>% 
+<<<<<<< HEAD
     rename_with(~paste0("topic_", c(1:length(.))), -contains(!!my_id_col))
+=======
+    rename_with(~paste0("topic_", c(1:length(.)-1)), -contains("article_id"))
+>>>>>>> d253ff39e0a445a70ff3845ff7444c3f5ab863a9
     # rename_at(vars(-contains("id_")), list(~paste0("topic_", c(1:topicModel_K))))
   
   message("------------renaming done")

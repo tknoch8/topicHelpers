@@ -12,6 +12,10 @@ export(make_topic_prevalence_plot)
 export(sort_all_document_topics)
 export(sort_document_topics)
 import(rlang)
+<<<<<<< HEAD
+=======
+import(tm)
+>>>>>>> d253ff39e0a445a70ff3845ff7444c3f5ab863a9
 importFrom(dplyr,arrange)
 importFrom(dplyr,desc)
 importFrom(dplyr,enquo)
@@ -21,7 +25,10 @@ importFrom(dplyr,group_by)
 importFrom(dplyr,left_join)
 importFrom(dplyr,mutate)
 importFrom(dplyr,rename_at)
+<<<<<<< HEAD
 importFrom(dplyr,rename_with)
+=======
+>>>>>>> d253ff39e0a445a70ff3845ff7444c3f5ab863a9
 importFrom(dplyr,row_number)
 importFrom(dplyr,select)
 importFrom(dplyr,summarize)

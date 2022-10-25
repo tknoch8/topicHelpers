@@ -7,7 +7,10 @@
 #' @param ... additional arguments passed
 #' @note to be used within topicHelpers::make_td_thetas_df. Shouldn't need to be used outside of that context
 #' @importFrom purrr map_df
+<<<<<<< HEAD
 #' @importFrom data.table subset
+=======
+>>>>>>> d253ff39e0a445a70ff3845ff7444c3f5ab863a9
 #' @export
 sort_all_document_topics <- function(data, id_column, n_topics = 5, ...) {
   
